@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width = device-width">
+    <title>Encriptador de texto</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/icon.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="encabezado">
+        <h1><img src="img/logo-alura.png" class="logo-alura"></h1>
+        <h2 class="titulo">CHALLENGE #1: Encriptador de texto</h2>
+    </header>
+    <main>
+        <section>
+            <article class="contenedorPrimario">
+                <div class="areaTextoIn">
+                    <textarea name="textarea" class="caja-texto" cols="30" rows="10" placeholder="Ingrese el texto aquí" required></textarea>
+                    <p class="advertencia"><img src="img/advertencia.png" alt="advertencia"> Solo letras minúsculas y sin acentos</p> 
+                </div>
+                <div class="contenedor-botones">
+                    <button type="button" class="boton-encriptar">Encriptar</button>
+                    <button type="button" class="boton-desencriptar">Desencriptar</button>
+                </div>
+            </article>
+            <article class="contenedorSecundario">
+                <aside class="contenedor-texto-out">
+                    <div class="label" id="label-texto-salida"></div>
+                    <img class="img-banner" src="img/Muñeco.png" id="img-banner">
+                    <p id="label-texto-no-encontrado">Ningún mensaje fue encontrado</p>
+                    <p id="label-ingresar-texto">Ingresa el texto que desees encriptar o desencriptar.</p>
+                </aside>
+                <aside class="contenedor-boton-copiar">
+                    <button type="button" class="boton-copiar">Copiar</button>
+                </aside>
+            </article>
+        </section>
+        <footer>
+            <p class="copyright">&#169; Alura LATAM | Devp: Daniel Tovar Perdomo</p>
+            <a href="https://github.com/DanToPer17"><img src="img/github.png" alt="github" class="logo-social"></a>
+            <a href="https://www.linkedin.com/in/danieltoper/"><img src="img/linkedin.png" alt="linkedin" class="logo-social"></a>
+        </footer>
+    </main>
+    <script src="js/main.js"></script>
+</body>
+</html>

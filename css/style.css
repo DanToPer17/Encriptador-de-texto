@@ -1,0 +1,234 @@
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    background: #F3F5FC;
+}
+.encabezado{
+    display:  flex;
+    margin: 40px 0 40px 84px;
+    align-items: center;
+}
+.titulo{
+    padding-left: 10px;
+    font-size: 1.1rem;
+    color: #343A40;
+    font-weight: bold;
+}
+section{
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-start;
+}
+.contenedorPrimario{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 10px 5% 10px 5%;
+    padding: 10px 2% 10px 2%;   
+}
+.areaTextoIn{
+    width: max-content;
+}
+.caja-texto{
+    width: auto;
+    background: #F3F5FC;
+    color: #0A3871;
+    border: none;
+    resize: none;
+    font-size: 2.5rem;
+    padding: 30px;
+    overflow: auto;
+}
+.caja-texto::placeholder{
+    color: #0A3871;
+    font-size: 2.5rem;
+}
+.caja-texto:focus{
+    outline: none;
+}
+.advertencia{
+    display: flex;
+    font-size: 1rem;
+    padding: 10px 30px 10px 30px;
+    align-items: flex-end;
+}
+.contenedor-botones{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px 20px 10px 20px;
+}
+.boton-encriptar{
+    width: 328px;
+    background: #0A3871;
+    border-radius: 24px;
+    border-color: #0A3871;
+    padding: 27px;
+    cursor: pointer;
+    font-size: 16px;
+    color: white;
+    margin: 5px;
+}
+.boton-desencriptar {
+    width: 328px;
+    background: white;
+    border-radius: 24px;
+    border-color: #0A3871;
+    padding: 27px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #0A3871;
+    margin: 5px;
+}
+.boton-encriptar:active, .boton-desencriptar:active, .boton-copiar{
+    transform: scale(1.02);
+}
+.contenedorSecundario{
+    width: auto;
+    height: auto;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    background: white;
+    border-radius: 32px;
+    box-shadow: 0px 24px 32px -8px rgb(0 0 0 / 16%);
+    padding: 3%;
+    margin: 10px 5% 10px 5%;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#label-texto-no-encontrado{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    color: #0A3871;
+    font-size: 2rem;
+    font-weight: bold;
+}
+#label-ingresar-texto{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: auto;
+    color: #343A40;
+}
+#label-texto-salida{
+    width: 600px;
+    height: auto;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    color: #0A3871;
+    font-size: 1.5em;
+    font-weight: bold; 
+    word-wrap: break-word;
+}
+.boton-copiar{
+    width: 328px;
+    background: white;
+    border-radius: 24px;
+    border-color: #0A3871;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #0A3871;
+    margin: 5px;
+    display: none;
+}
+.banner-off, .lblTextoNoEncontrado-off, .lblIngresarTexto-off{
+    display: none;
+}
+.boton-copiar-on{
+    display: block;
+}
+.boton-copiar-on:active{
+    animation: pulsate 0.5s;
+    display: block;
+}
+@keyframes pulsate{
+    0%{
+        box-shadow: 0 0 25px #5ddcff, 0 0 50px #0A3871; 
+    }
+}
+footer{
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    background: gainsboro;
+    bottom: 0;
+    position: fixed;
+}
+.logo-social{
+    width: 35px;
+    border-radius: 5px; 
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.582);
+    margin: 3px;
+    transition: 0.4s;
+    background: gainsboro;
+}
+.logo-social:hover{
+    transform: translateY(-5px);
+}
+/*====================RESPOSIVO:  Dispositivos Smartphones=============================*/
+@media screen and (max-width: 480px) {
+    .encabezado{
+        margin: 5px;
+        padding: 30px 20px 10px 20px;
+    }
+    .titulo{
+        font-size: 0.9rem;
+    }
+    section{
+        display: block;
+    }
+    .contenedorPrimario{
+        width: auto;
+        display: block;
+        margin: auto;
+        padding: 5px;
+    }
+    .caja-texto{
+        padding: 20px;
+        font-size: 1.5em;
+    }
+    .caja-texto::placeholder{
+        font-size: 1.5rem;
+    }
+    .advertencia{
+        font-size: 0.8em;
+    }
+    .contenedorSecundario {
+        margin: 5px;
+        padding: 5px;
+    }
+    .contenedor-botones{
+        padding-top: 0;
+        padding-bottom: 0;
+        margin: 0 10 0 10;
+    }
+    .contenedor-texto-out{
+        padding:10px;
+    }
+    .img-banner{
+        display: none;
+    }
+    #label-texto-no-encontrado{
+        font-size: 1.2rem;
+    }
+    #label-texto-salida{
+        width: 350px;
+        height: auto;
+        font-size: 0.9rem;
+        padding: 5px;
+    }
+    .boton-copiar-on{
+        width: 150px;
+        display: block;
+    }
+    footer{
+        width: 94.5%;
+        font-size: 0.9rem;
+        position:static;
+    }
+    .logo-social{
+        width: 27px;
+        margin: 3px;
+    }
+}
